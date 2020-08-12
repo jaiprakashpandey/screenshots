@@ -1,0 +1,45 @@
+
+#Configuration files for the screenshot as service API
+
+welcome_msg: "Hello World - Screenshots API!"
+
+database:
+        dbtype: 'mongodb'
+        dbname: 'test'
+        host: "cluster0-shard-00-00-mfhye.mongodb.net:27017,cluster0-shard-00-01-mfhye.mongodb.net:27017,cluster0-shard-00-02-mfhye.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
+        username: 'jai'
+        password: 'James007%24'
+        screen_db_collections_name: screens_shots_collections
+
+error_msg:
+        driver_not_loaded: 'Unable to load Driver, please check if its installed correctly!'
+
+
+mimetype_image: image
+mimetype_json: json
+mimetype_appl_or_json: "application/json"
+
+api_url_header_get: "/api/screen/<string:domain>"
+api_url_header_post: "/api/screen/shot"
+
+status:
+      completed: "{status : completed}"
+      failed: 'failed'
+      action: 'please contact admin support'
+
+chrome:
+      driver:
+            options:
+                    ignore_certificate: --ignore-certificate-errors
+                    headless_chrome: --headless
+                    disable_gpu: --disable-gpu
+                    start_full_screen: --start-fullscreen
+                    test_type: --test-type
+
+parallel_pool_size: 5                   
+
+
+
+
+
+
